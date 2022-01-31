@@ -13,6 +13,8 @@ Dependencies on package.json (may use npm install / build)
 ## Architecture
 Responsive React app with react-bootstrap ablte to make axios calls to its sibling backend server to retrieve updated financial information.
 
+[Wireframe](./wireframe.jpg)
+
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
