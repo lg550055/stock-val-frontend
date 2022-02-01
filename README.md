@@ -16,7 +16,7 @@ Responsive React app with react-bootstrap ablte to make axios calls to its sibli
 - [Domain model](./domainModel.jpg)
 - [Wireframe](./wireframe.jpg)
 
-#### Database schema
+### Database schema
 
 **User profile**
 - email: String,
