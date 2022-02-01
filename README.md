@@ -13,23 +13,22 @@ Dependencies on package.json (may use npm install / build)
 ## Architecture
 Responsive React app with react-bootstrap ablte to make axios calls to its sibling backend server to retrieve updated financial information.
 
-[Domain model](./domainModel.jpg)
-[Wireframe](./wireframe.jpg)
+- [Domain model](./domainModel.jpg)
+- [Wireframe](./wireframe.jpg)
 
 #### Database schema
 
 **User profile**
-email: String, watchlist: [String]
+- email: String,
+- watchlist: [String]
 
 **Stock**
-2021: { rev: Number, ebitda: Number, capex: Number, cash: Number, debt: Number},
-2020: { rev: Number, ebitda: Number, capex: Number, cash: Number, debt: Number},
-2019: { rev: Number, ebitda: Number, capex: Number, cash: Number, debt: Number}
+- 2021: { rev: Number, ebitda: Number, capex: Number, cash: Number, debt: Number},
+- 2020: { rev: Number, ebitda: Number, capex: Number, cash: Number, debt: Number},
+- 2019: { rev: Number, ebitda: Number, capex: Number, cash: Number, debt: Number}
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+1.31.2022 - Initial commit: set up, wireframe, domain model, schema, initial README and requirements
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
