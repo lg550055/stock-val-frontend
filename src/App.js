@@ -14,7 +14,7 @@ class App extends React.Component {
     }
   }
 
-  url = 'http://localhost:3001/stocks' // class variable for DRYness
+  url = process.env.REACT_APP_SERVER // class variable for DRYness
 
   getStocks = () => {
     axios.get(this.url)
