@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
+import Header from './Header';
+import Footer from './Footer';
+
 
 function App() {
+
+  let url = 'https://stock-val.herokuapp.com/stocks';
+  axios.get(url)
+    .then((stockData) => stockData.data[0].ticker)
+
+    let ticker = 'BABA';
+    let purl = 'https://stock-val.herokuapp.com/price?ticker='+ticker;
+  axios.get(purl)
+    .then((pData) => console.log(pData.data))
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <p>Hello World!</p>
+      <Footer />
+    </>
   );
 }
 
