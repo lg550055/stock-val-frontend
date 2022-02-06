@@ -3,7 +3,6 @@ import axios from 'axios';
 import './App.css';
 import { Container, Table, Form, Button, Accordion, Badge } from 'react-bootstrap';
 import Header from './Header';
-import Footer from './Footer';
 
 
 class App extends React.Component {
@@ -75,7 +74,7 @@ class App extends React.Component {
         <Header />
         <br></br>
         <Container>
-          <h3>Meaningful, simple, stock valuation</h3>
+          <h5>Meaningful, simple, stock valuation</h5>
           <br></br>
           <Accordion>
             <Accordion.Item eventKey="0">
@@ -123,7 +122,9 @@ class App extends React.Component {
             </Accordion.Item>
           </Accordion>
         </Container>
-        <Footer />
+        <footer>
+          <p>Created by GoodHacker 2022</p>
+        </footer>
       </>
     )  
   }
