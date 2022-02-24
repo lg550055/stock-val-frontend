@@ -1,7 +1,23 @@
 body {
   text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #61dafb;
+  background-color: #282c34;
+}
 
+h3 {
+  margin: 5vh auto 3vh;
+}
+
+h6 {
+  color: azure;
+}
+
+.table {
+  margin: 2vh auto 7vh;
+}
+
+.accordion-body {
   background-color: #282c34;
 }
 

@@ -75,23 +75,10 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <br></br>
         <Container>
-          <h5>Meaningful, simple, stock valuation</h5>
-          <br></br>
-          <Accordion>
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>Why TEV is more Meaningful</Accordion.Header>
-              <Accordion.Body>
-                P/E mostly ignores the capital structure of the business.  TEV fully accounts for it.
-                A simple expample could help us see the issue.  Business A has no cash and 50 of debt.
-                Business B has 100 cash and no debt.  Both have the same earnings and p/e.
-                Which one would you buy?
-              </Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
+          <h3>Meaningful, simple, stock valuation</h3>
+          <h6>Units $b, except price in $ and nondimensional items</h6>
          </Container>
-         <br></br>
         <Container>
           <Table striped variant="dark" size="sm">
             <thead>
@@ -112,7 +99,6 @@ class App extends React.Component {
             </tbody>
           </Table>
         </Container>
-        <br></br>
         <Container>
           <Accordion>
             <Accordion.Item eventKey="0">
@@ -122,8 +108,18 @@ class App extends React.Component {
                   <Form.Group className="mb-3">
                     <Form.Control type="text" name='ticker' placeholder="ticker" />
                   </Form.Group>
-                  <Button variant="outline-primary" type="submit">Submit</Button>
+                  <Button variant="outline-secondary" type="submit">Submit</Button>
                 </Form>
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>Why is TEV more meaningful than p/e...</Accordion.Header>
+              <Accordion.Body>
+                P/E mostly ignores the capital structure of the business.  TEV (Total Enterprise Value)
+                fully accounts for it.
+                A simple expample could help us see the issue.  Business A has no cash and 50 of debt.
+                Business B has 100 cash and no debt.  Both have the same earnings and p/e.
+                Which one would you buy?
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
