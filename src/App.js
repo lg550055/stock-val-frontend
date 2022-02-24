@@ -61,10 +61,13 @@ class App extends React.Component {
     let tList = this.state.stocks.map((e,i) => 
       <tr key={i}>
         <td>{e.ticker}</td>
-        <td>{e.price}</td>
-        <td>{e.price ? Math.round(e.price * e.shares/1e3) : 0}</td>
-        <td>{e.kItems[0].revenue}</td>
-        <td>{e.kItems[0].cfo}</td>
+        <td>{Math.round(e.price)}</td>
+        <td>{e.price ? Math.round(e.price*e.shares) : 0}</td>
+        <td>{Math.round((e.debt-e.cash)*10)/10}</td>
+        <td>{e.price ? Math.round(e.price*e.shares+e.debt-e.cash) : 0}</td>
+        <td>{Math.round((e.annual[0].ebit+e.annual[0].da)*10)/10}</td>
+        <td>{Math.round((e.annual[0].capex)*10)/10}</td>
+        <td>{e.price ? Math.round((e.price*e.shares+e.debt-e.cash)/(e.annual[0].ebit+e.annual[0].da)) : 0}x</td>
         <td><Badge bg="secondary" onClick={()=> this.deleteStock(e._id)}>x</Badge></td>
       </tr>
     )
@@ -95,9 +98,12 @@ class App extends React.Component {
               <tr>
                 <th>Ticker</th>
                 <th>Price</th>
+                <th>MktCap</th>
+                <th>NetDebt</th>
                 <th>TEV</th>
-                <th>TEV/rev</th>
-                <th>TEV/E-C</th>
+                <th>Ebitda</th>
+                <th>Capex</th>
+                <th>TEV/ebitda</th>
                 <th></th>
               </tr>
             </thead>
