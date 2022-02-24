@@ -68,6 +68,7 @@ class App extends React.Component {
         <td>{Math.round((e.annual[0].ebit+e.annual[0].da)*10)/10}</td>
         <td>{Math.round((e.annual[0].capex)*10)/10}</td>
         <td>{e.price ? Math.round((e.price*e.shares+e.debt-e.cash)/(e.annual[0].ebit+e.annual[0].da)) : 0}x</td>
+        <td>{e.price ? Math.round((e.price/e.annual[0].eps)*10)/10 : 0}</td>
         <td><Badge bg="secondary" onClick={()=> this.deleteStock(e._id)}>x</Badge></td>
       </tr>
     )
@@ -76,8 +77,9 @@ class App extends React.Component {
       <>
         <Header />
         <Container>
-          <h3>Meaningful, simple, stock valuation</h3>
+          <h3>Concise stock valuation <i>-beta</i></h3>
           <h6>Units $b, except price in $ and nondimensional items</h6>
+          <h6><i>Work in progress - read disclosures below</i></h6>
          </Container>
         <Container>
           <Table striped variant="dark" size="sm">
@@ -91,6 +93,7 @@ class App extends React.Component {
                 <th>Ebitda</th>
                 <th>Capex</th>
                 <th>TEV/ebitda</th>
+                <th>p/e</th>
                 <th></th>
               </tr>
             </thead>
@@ -120,6 +123,16 @@ class App extends React.Component {
                 A simple expample could help us see the issue.  Business A has no cash and 50 of debt.
                 Business B has 100 cash and no debt.  Both have the same earnings and p/e.
                 Which one would you buy?
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>Important Disclosures - Read</Accordion.Header>
+              <Accordion.Body>
+                The focus of this beta version is the correct data flow from the server, which makes
+                external API calls to retrieve the information for each stock.
+                However, the finacials for each stock may be out of date or incomplete.
+                Working on the next version, whose main feature will be displaying the most recent data
+                as filed with the SEC.
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
